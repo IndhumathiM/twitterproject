@@ -1,0 +1,27 @@
+@import 'bootstrap';
+
+/* universal */
+
+body {
+  background-image: image-url('swirl_pattern.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+
+}

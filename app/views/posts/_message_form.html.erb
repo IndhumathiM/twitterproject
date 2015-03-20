@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+<div class="container">
+<%= form_tag({:controller => "posts", :action => "create"}, ) do %>
+
+
+  <%= label_tag(:message, "Please put your post here:") %><br />
+  <%= text_area_tag(:message, nil, :size => "90x6",:placeholder => "Tweet here") %><br />
+  <%= submit_tag("Tweet") %>
+      </div>
+<% end %>
+<% end %>
