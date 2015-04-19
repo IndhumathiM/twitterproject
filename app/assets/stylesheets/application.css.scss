@@ -3,10 +3,14 @@
 /* universal */
 
 body {
-  background-image: image-url('swirl_pattern.png');
+
+  background-image: image-url('tweety.png');
     background-repeat: no-repeat;
-    background-size: 100%;
-    padding-top: 60px;
+    background-size: 50%;
+  background-position: right ;
+
+  padding-top: 60px;
+
 }
 
 section {

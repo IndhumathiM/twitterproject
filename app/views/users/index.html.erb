@@ -1,10 +1,38 @@
+<h1><%= "Current users available to follow" %></h1>
 
-< % @users.each do |user| %>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        width:30%
+    align:center
+    }
+</style>
+
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Action</th>
+    <th colspan="4"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+
+      <% if user.id != current_user.id %>
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.username %></td>
+            <td><%=user.email%></td>
+            <td><%= link_to "Follow", friendships_path(:followed_id => user, :follower_id=>current_user.id), :method => "post" %></td>
+          </tr>
+      <% end %>
+  <% end %>
+
+  </tbody>
+</table>
+
     
-      < % if user.username != current_user.username %>
-        < %=h user.username %>
-        < %= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
-      < % end %>
-    
-    
-  < % end %>
